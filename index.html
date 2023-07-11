@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema Web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">basededaots.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="#contenido">top</a>
+                    <a class="nav-link" href="#footer">down</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  <div id="contenido" class="container mt-4">
+    <h1>Datos del API</h1>
+
+    <table id="data-table" class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Capital</th>
+          <th>Población</th>
+          <th>Región</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="data-table-body"></tbody>
+    </table>
+
+    <form id="data-form" class="mt-4">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="capital" class="form-label">Capital</label>
+        <input type="text" class="form-control" id="capital" required>
+      </div>
+      <div class="mb-3">
+        <label for="poblacion" class="form-label">Población</label>
+        <input type="number" class="form-control" id="poblacion" required>
+      </div>
+      <div class="mb-3">
+        <label for="region" class="form-label">Región</label>
+        <input type="text" class="form-control" id="region" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+  <div id="footer">
+    <!-- Contenido del pie de página -->
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
