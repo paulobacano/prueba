@@ -1,3 +1,86 @@
+/*selectores en javascript */
+/*VALIDACIONESt */
+let nombre = document.getElementById('nombre');
+let capital = document.getElementById('capital');
+let region = document.getElementById('region');
+
+function validarnombre() {
+    let regex = /^[A-Za-z]+$/;
+    let validnombre = document.getElementById('validnombre');
+    if (!regex.test(nombre.value)) {
+        //alert("Invalid");
+        validnombre.style = "display:block;";
+        validnombre.innerText = "ingrese solo letras";
+        validnombre.className = "text-danger";
+
+        nombre.className="form-control border-input-error";
+        return false;
+    }
+    nombre.className="form-control border-input-ok";
+    validnombre.style = "display:none;";
+    return true;
+}
+nombre.addEventListener('input', validarnombre);
+
+
+//funcion principal. será la encargada de leer los datos.
+function leerInputForm(){
+    let valid1= validarnombre();
+    console.log(valid1);
+}
+
+function validarcapital() {
+  let regex = /^[A-Za-z]+$/;
+  let validcapital = document.getElementById('validcapital');
+  if (!regex.test(capital.value)) {
+      //alert("Invalid");
+      validcapital.style = "display:block;";
+      validcapital.innerText = "ingrese solo letras";
+      validcapital.className = "text-danger";
+
+      capital.className="form-control border-input-error";
+      return false;
+  }
+  capital.className="form-control border-input-ok";
+  validcapital.style = "display:none;";
+  return true;
+}
+capital.addEventListener('input', validarcapital);
+
+
+//funcion principal. será la encargada de leer los datos.
+function leerInputForm(){
+  let valid1= validarcapital();
+  console.log(valid1);
+}
+
+function validarregion() {
+  let regex = /^[A-Za-z]+$/;
+  let validregion = document.getElementById('validregion');
+  if (!regex.test(region.value)) {
+      //alert("Invalid");
+      validregion.style = "display:block;";
+      validregion.innerText = "ingrese solo letras";
+      validregion.className = "text-danger";
+
+      region.className="form-control border-input-error";
+      return false;
+  }
+  region.className="form-control border-input-ok";
+  validregion.style = "display:none;";
+  return true;
+}
+region.addEventListener('input', validarregion);
+
+
+//funcion principal. será la encargada de leer los datos.
+function leerInputForm(){
+  let valid1= validarregion();
+  console.log(valid1);
+}
+
+/*VALIDACIONESt */
+
 // Requerimiento 2: Guardar los datos del API en un array
 const dataArray = [];
 
